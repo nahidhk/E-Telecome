@@ -1,4 +1,5 @@
-        <div class="serverInfo">
+ </div>
+      <div class="serverInfo">
             <div class="flex center medel">
                 <h3>Server Info</h3>
             </div>

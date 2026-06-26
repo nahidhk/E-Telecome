@@ -9,7 +9,6 @@
 
     // Linux system e service status check
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,13 +22,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
         integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="/other/javascript/system.js"></script>
 </head>
 
 <body>
     <nav class="navBar flex beet medel">
         <div>
-            <h2 style="padding:10px">
-                NdSQL Admin Panel
+            <h2 class="flex medel" style="padding:10px">
+                <span id="navMenuBtn" class="nav-menu-btn">
+                    <i class="fa-solid fa-bars"></i> &nbsp;&nbsp;
+                </span>
+                <span class="mbBlock">
+                    NdSQL
+                </span>
+                <span class="pcBlock">
+                    NdSQL Admin Panel
+                </span>
             </h2>
         </div>
         <div style="padding:10px">
@@ -60,27 +68,37 @@
                 Sign Out
             </div>
         </div>
-
-        <script>
-        const accountIconBtn = document.getElementById('accountIconBtn');
-        const outsideMenu = document.getElementById('outsideMenu');
-
-        accountIconBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            outsideMenu.classList.toggle('show');
-        });
-
-        document.addEventListener('click', function(e) {
-            if (!outsideMenu.contains(e.target) && !accountIconBtn.contains(e.target)) {
-                outsideMenu.classList.remove('show');
-            }
-        });
-
-
-        function logout() {
-            window.location.href = "logout.php"
-        }
-        </script>
     </nav>
-    <div class="flex beet">
-        <?php include("components/sidebar.php") ?>
+    <div>
+        <?php include "components/sidebar.php"?>
+        <div class="flex center medel w100">
+            <script>
+            const accountIconBtn = document.getElementById('accountIconBtn');
+            const outsideMenu = document.getElementById('outsideMenu');
+            const navMenuBtn = document.getElementById('navMenuBtn');
+            const sideBar = document.getElementById('sideBar');
+
+            accountIconBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                outsideMenu.classList.toggle('show');
+            });
+            navMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                sideBar.classList.toggle('show');
+            });
+
+
+            document.addEventListener('click', function(e) {
+                if (!outsideMenu.contains(e.target) && !accountIconBtn.contains(e.target)) {
+                    outsideMenu.classList.remove('show');
+                    sideBar.classList.remove('show');
+                }
+            });
+
+
+
+
+            function logout() {
+                window.location.href = "logout.php"
+            }
+            </script>

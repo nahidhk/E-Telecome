@@ -26,7 +26,8 @@ catch (PDOException $e)
  ?><div style="background: rgb(128 128 128 / 14%);padding: 10px;border-radius: 10px;text-align: center;max-width: 800px;width: 100%;font-weight: 700;font-family: sans-serif;margin: auto; ">  Database Connection Problem !  </div> <?php
 }
 
-
+// upload setting
+$imgData = "uploads/";
 // admin system 
 $admin_name = "Ndsql Admin Panel";
 

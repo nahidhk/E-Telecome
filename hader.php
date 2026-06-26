@@ -22,7 +22,7 @@
             <div class="flex center medel">
                 <div onclick="linkCall('/')">
                     <!-- Nav Logo -->
-                    <img class="nav_logo" src="<?php echo ndsql_info(3)["value"] ?>" alt="NdSQL site logo">
+                    <img class="nav_logo" src="<?php echo ndsql_info(3)["value"] ?>" alt="<?= ndsql_info(2)['value'] ?>">
                 </div>
             </div>
 
