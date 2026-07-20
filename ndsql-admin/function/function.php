@@ -71,3 +71,41 @@ function change_ndsql_info($data){
 
     return true;
 }
+
+
+function ndsql_get_developer($id = null) {
+    global $conn; // PDO connection
+
+    try {
+        if ($id) {
+            // নির্দিষ্ট একজন ডেভেলপার আনো
+            $sql = "SELECT * FROM developers WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute([$id]);
+            $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($data) {
+                $data['skills']  = json_decode($data['skills'], true);
+                $data['socials'] = json_decode($data['socials'], true);
+            }
+
+            return $data;
+        } else {
+            // সব ডেভেলপার আনো
+            $sql = "SELECT * FROM developers";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach ($rows as &$row) {
+                $row['skills']  = json_decode($row['skills'], true);
+                $row['socials'] = json_decode($row['socials'], true);
+            }
+
+            return $rows;
+        }
+    } catch (PDOException $e) {
+        error_log("ndsql_get_developer error: " . $e->getMessage());
+        return false;
+    }
+}

@@ -53,7 +53,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
         <div class="flex center medel">
             <div>
                 <div class="flex center medel">
-                    <img class="login-logo" src="https://ndsql.top/static/media/nav_logo.2f5179eca4b775b70bff.png"
+                    <img class="login-logo" src="https://raw.githubusercontent.com/nahidhk/NdSQL/refs/heads/main/src/assets/img/nav_logo.png"
                         alt="Logo">
                 </div>
                 <div class="loginBox">

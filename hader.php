@@ -14,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
         integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
 </head>
 
 <body>
@@ -22,7 +23,8 @@
             <div class="flex center medel">
                 <div onclick="linkCall('/')">
                     <!-- Nav Logo -->
-                    <img class="nav_logo" src="<?php echo ndsql_info(3)["value"] ?>" alt="<?= ndsql_info(2)['value'] ?>">
+                    <img class="nav_logo" src="<?php echo ndsql_info(3)["value"] ?>"
+                        alt="<?= ndsql_info(2)['value'] ?>">
                 </div>
             </div>
 
@@ -64,7 +66,7 @@
 
         </div>
     </nav>
-<script src="other/javascript/haderScript.js"></script>
+    <script src="other/javascript/haderScript.js"></script>
 </body>
 
 </html>

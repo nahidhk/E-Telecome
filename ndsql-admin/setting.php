@@ -7,7 +7,7 @@
         General Settings
     </h2>
     <br>
-    <?php  include("components/setting-Nav.php") ?>
+    <?php  include("components/setting-general.php") ?>
 </div>
 
 

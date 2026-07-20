@@ -15,6 +15,10 @@ $phpFile = $_GET['i'] ?? '';
         <i class="fa-solid fa-gear"></i>
         Site Setting
     </div>
+     <div onclick="callthisLink('engCard.php')"  class="icon-btn <?= ($phpFile === 'engCard.php') ? 'active' : '' ?>">
+        <i class="fa-regular fa-address-card"></i>
+        Eng Card info
+    </div>
 </div>
 
 <script>
