@@ -3,6 +3,13 @@
 include("hader.php");
 $allData = ndsql_get_developer();
 ?>
+ <div>
+
+<div class="box">
+    <?php include("components/eng-card-new.php") ?>
+</div>
+
+
 
 <div class="table-wrap">
    <div class="flex beet medel">
@@ -79,3 +86,6 @@ $allData = ndsql_get_developer();
 </div>
 
 <?php include("footer.php"); ?>
+
+
+</div>

@@ -23,13 +23,14 @@
         integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="/other/javascript/system.js"></script>
+        <script src="js/admin-script.js"></script>
 </head>
 
 <body>
     <nav class="navBar flex beet medel">
         <div>
             <h2 class="flex medel" style="padding:10px">
-                <span id="navMenuBtn" class="nav-menu-btn">
+                <span onclick="sideBarTogelMenu()" id="navMenuBtn" class="nav-menu-btn">
                     <i class="fa-solid fa-bars"></i> &nbsp;&nbsp;
                 </span>
                 <span class="mbBlock">
@@ -94,10 +95,6 @@
                     sideBar.classList.remove('show');
                 }
             });
-
-
-
-
             function logout() {
                 window.location.href = "logout.php"
             }
