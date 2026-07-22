@@ -12,6 +12,4 @@
 
 
 
-<!-- popup in gallery   -->
-<?php include 'components/gallery.php'?>
 <?php echo include 'footer.php' ?>

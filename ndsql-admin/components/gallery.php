@@ -1,3 +1,4 @@
+<!-- gallery.php -->
 <?php 
 $images = ndsql_get_images();
 ?>

@@ -71,11 +71,13 @@
     </div>
 
 </div>
-
-
-
-
 </div>
+
+
+<!-- popup in gallery   -->
+<?php include 'components/gallery.php'?>
+
+
 </body>
 
 </html>
