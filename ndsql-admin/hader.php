@@ -3,10 +3,10 @@
     include "config.php";
 
     if (! isset($_SESSION["is_admin"]) || $_SESSION["is_admin"] !== true) {
-    header("Location: login.php");
+    header("Location: /ndsql-admin/login.php");
     exit();
     }
-
+ $r_key = Date("hmsdi");
     // Linux system e service status check
 
 ?>
@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $admin_name ?></title>
-    <link rel="stylesheet" href="/other/style/style.main.css">
+    <link rel="stylesheet" href="/other/style/style.main.css?v=<?php echo $r_key ?>">
     <!-- CDN FontAsome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
         integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="

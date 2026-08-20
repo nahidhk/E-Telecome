@@ -35,4 +35,16 @@
     <?php include_once("g-setting-marquee.php") ?>
 </details>
 
+<details>
+    <summary class="flex beet">
+        <div>
+           <i class="fa-brands fa-tidal"></i> Frontend :: Website Footer Setting
+        </div>
+        <div>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </summary>
+    <?php include_once('g-setting-footer.php') ?>
+</details>
+
 

@@ -1,17 +1,15 @@
-<!-- file: engCard.php -->
 <?php
-    // error_reporting(E_ALL); ini_set('display_errors', 1);
-    include "hader.php";
-    $allData = ndsql_get_developer();
-
-    if (isset($_GET['delete'])) {
-    ndsql_delete_developer((int) $_GET['delete']);
-
-    header("Location: /ndsql-admin/engCard.php?i=engCard.php");
-    exit;
-    }
-
+include("./hader.php");
 ?>
+
+
+
+
+
+
+
+
+
 
 <div>
 
@@ -32,11 +30,9 @@
                 <tr>
                     <th>#ID</th>
                     <th>Profile Image</th>
-                    <th>Name</th>
-                    <th>Contact And Address</th>
-                    <th>Skill</th>
-                    <th>Social</th>
-                    <th>Action</th>
+                    <th>email</th>
+                    <th>status</th>
+                    <th>Date</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,8 +43,7 @@
                     <td class="td-id"><?php echo htmlspecialchars($dev['id']) ?></td>
 
                     <td class="td-avatar">
-                        <img src="<?php echo htmlspecialchars($dev['profile_image']) ?>"
-                            alt="<?php echo htmlspecialchars($dev['name']) ?>">
+                      22222
                     </td>
 
                     <td class="td-name">
@@ -106,7 +101,7 @@
                 <?php endforeach; ?>
                 <?php else: ?>
                 <tr>
-                    <td colspan="6" class="td-empty">No developer found.</td>
+                    <td colspan="6" class="td-empty">No data found.</td>
                 </tr>
                 <?php endif; ?>
             </tbody>
@@ -119,4 +114,16 @@
 </div>
 
 
-<?php include "footer.php"; ?>
+
+
+
+
+
+
+
+
+
+
+<?php 
+include("./footer.php")
+?>

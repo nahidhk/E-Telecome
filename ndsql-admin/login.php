@@ -58,7 +58,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                 </div>
                 <div class="loginBox">
                     <center>
-                        <h2>Login to Your Account</h2>
+                        <h2>Login to Your Account  </h2>
                         <hr>
                         <br>
                     </center>

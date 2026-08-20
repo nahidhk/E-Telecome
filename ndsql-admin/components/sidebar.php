@@ -7,22 +7,31 @@ $phpFile = $_GET['i'] ?? '';
         <i class="fa-solid fa-chart-column"></i>
         Dashbord
     </div>
-    <div onclick="callthisLink('upload.php')"  class="icon-btn <?= ($phpFile === 'upload.php') ? 'active' : '' ?>">
+    <div onclick="callthisLink('upload.php')" class="icon-btn <?= ($phpFile === 'upload.php') ? 'active' : '' ?>">
         <i class="fa-regular fa-images"></i>
         Media
     </div>
-    <div onclick="callthisLink('setting.php')"  class="icon-btn <?= ($phpFile === 'setting.php') ? 'active' : '' ?>">
+    <div onclick="callthisLink('setting.php')" class="icon-btn <?= ($phpFile === 'setting.php') ? 'active' : '' ?>">
         <i class="fa-solid fa-gear"></i>
         Site Setting
     </div>
-     <div onclick="callthisLink('engCard.php')"  class="icon-btn <?= ($phpFile === 'engCard.php') ? 'active' : '' ?>">
+    <div onclick="callthisLink('engCard.php')" class="icon-btn <?= ($phpFile === 'engCard.php') ? 'active' : '' ?>">
         <i class="fa-regular fa-address-card"></i>
         Eng Card info
     </div>
+    <div onclick="callthisLink('pages.php')" class="icon-btn <?= ($phpFile === 'pages.php') ? 'active' : '' ?>">
+        <i class="fa-regular fa-newspaper"></i>
+        Pages
+    </div>
+    <div onclick="callthisLink('sub.php')" class="icon-btn <?= ($phpFile === 'sub.php') ? 'active' : '' ?>">
+        <i class="fa-regular fa-user"></i>
+        Subscribers
+    </div>
+    </script>
 </div>
 
 <script>
 function callthisLink(linkData) {
-    window.location.href ="/ndsql-admin/" + linkData + "?i=" + linkData;
+    window.location.href = "/ndsql-admin/" + linkData + "?i=" + linkData;
 }
 </script>

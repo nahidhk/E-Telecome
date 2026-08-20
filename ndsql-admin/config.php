@@ -31,6 +31,7 @@ $imgData = "uploads/";
 // admin system 
 $admin_name = "Ndsql Admin Panel";
 
+
 include("function/function.php");
 
 

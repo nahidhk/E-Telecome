@@ -1,5 +1,5 @@
-<div class="box">
-    <div class="s-Card-grid margin">
+<div class="info">
+    <div class="s-Card-grid marginTo">
         <div class="s-Card">
             <div class="icon-wrap"><i class="fa-solid fa-house-laptop"></i></div>
             <div class="info">
@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <div class="s-Card-grid margin">
+    <div class="s-Card-grid marginTo">
         <div class="s-Card">
             <div class="icon-wrap"><i class="fa-solid fa-chart-pie"></i></div>
             <div class="info">
@@ -74,7 +74,7 @@
             </div>
         </div>
     </div>
-    <div class="s-Card-grid margin">
+    <div class="s-Card-grid marginTo">
         <div class="s-Card">
             <div class="icon-wrap"><i class="fa-solid fa-hard-drive"></i></div>
             <div class="info">
@@ -127,7 +127,7 @@
             </div>
         </div>
     </div>
-    <div class="s-Card-grid margin">
+    <div class="s-Card-grid marginTo">
         <div class="s-Card">
             <div class="icon-wrap"><i class="fa-solid fa-network-wired"></i></div>
             <div class="info">
@@ -171,7 +171,7 @@
             </div>
         </div>
     </div>
-    <div class="s-Card-grid">
+    <div class="s-Card-grid marginTo">
         <div class="s-Card">
             <div class="icon-wrap"><i class="fa-solid fa-weight-hanging"></i></div>
             <div class="info">
@@ -398,7 +398,7 @@
             </div>
         </div>
     </div>
-    <div class="s-Card margin">
+    <div class="s-Card marginTop">
         <div class="icon-wrap"><i class="fa-solid fa-diagram-project"></i></div>
         <div class="info">
             <b>Session Save Path</b>
@@ -406,7 +406,7 @@
         </div>
     </div>
 
-    <div class="s-Card margin">
+    <div class="s-Card marginTop">
         <div class="icon-wrap"><i class="fa-solid fa-server"></i></div>
         <div class="info">
             <b>Server Software</b>
@@ -414,7 +414,7 @@
         </div>
     </div>
 
-    <div class="s-Card margin">
+    <div class="s-Card marginTop">
         <div class="icon-wrap"><i class="fa-brands fa-linux"></i></div>
         <div class="info">
             <b>OS</b>
@@ -423,14 +423,14 @@
     </div>
 
 
-    <div class="s-Card margin">
+    <div class="s-Card marginTop">
         <div class="icon-wrap"><i class="fa-solid fa-language"></i></div>
         <div class="info">
             <b>Browser Language</b>
             <span><?php echo $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'N/A'; ?></span>
         </div>
     </div>
-    <div class="s-Card margin">
+    <div class="s-Card marginTop">
         <div class="icon-wrap"><i class="fa-solid fa-server"></i></div>
         <div class="info">
             <b>MySQL Version</b>
@@ -453,7 +453,7 @@
         </div>
     </div>
 
-    <div class="s-Card margin">
+    <div class="s-Card marginTop">
         <div class="icon-wrap"><i class="fa-solid fa-fingerprint"></i></div>
         <div class="info">
             <b>Session ID</b>
@@ -461,14 +461,14 @@
         </div>
     </div>
     <div class="s-Card">
-        <div class="icon-wrap margin"><i class="fa-solid fa-folder-open"></i></div>
+        <div class="icon-wrap marginTop"><i class="fa-solid fa-folder-open"></i></div>
         <div class="info">
             <b>Document Root</b>
             <span><?php echo $_SERVER['DOCUMENT_ROOT']; ?></span>
         </div>
     </div>
 
-    <div class="s-Card margin">
+    <div class="s-Card marginTop">
         <div class="icon-wrap"><i class="fa-solid fa-eye"></i></div>
         <div class="info">
             <b>Referrer</b>

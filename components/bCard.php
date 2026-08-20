@@ -269,7 +269,7 @@ $allData = ndsql_get_developer();
                     <?php endif; ?>
 
                     <?php if ($whatsappNumber): ?>
-                        <a href="https://wa.me/<?= $whatsappNumber ?>" target="_blank" aria-label="WhatsApp">
+                        <a href="https://wa.me/+88<?= $whatsappNumber ?>" target="_blank" aria-label="WhatsApp">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     <?php endif; ?>

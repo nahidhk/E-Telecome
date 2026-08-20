@@ -1,4 +1,28 @@
-<form action="" method="post">
+<?php
+    include "./hader.php";
+
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+   $ndsqlData = ndsql_insert_developer($_POST);
+    header("Location: /ndsql-admin/engCard.php?i=engCard.php");
+    exit;
+    }
+?>
+<div class="box">
+    <div class="flex medel">
+        <div onclick="callBack()" class="backBtn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <h2>
+            New Card add
+        </h2>
+    </div>
+<form method="post">
     <table>
         <tr>
             <td>
@@ -37,7 +61,7 @@
                 <label for="phone">Phone:</label>
             </td>
             <th>
-                <input type="number" class="input" name="phone" placeholder="+88018000000000" required>
+                <input type="number" class="input" name="phone" placeholder="018000000000" required>
             </th>
         </tr>
         <tr>
@@ -47,7 +71,8 @@
             <th>
                 <img src="" id="previweImg10" alt="NdSQL web System" class="settingImg"><br>
                 <div class="flex center medel">
-                    <input oninput="imgChenger({inputTagID: 'profile_image' , imgTagID: 'previweImg10'})"
+                    <input placeholder="Image"
+                        oninput="imgChenger({inputTagID: 'profile_image' , imgTagID: 'previweImg10'})"
                         id="profile_image" name="profile_image" type="text" value="" class="input">
                     <div class="gBtn flex center medel" onclick="openGallery('profile_image')">
                         <i class="fa-regular fa-images"></i>
@@ -101,7 +126,7 @@
                 <label for="socials">Socials</label>
             </td>
             <th>
-                <input type="text" id="output" name="socials">
+                <input type="text" id="output" name="socials" value="[]">
                 <div class="flex medel center">
                     <i class="fa-brands fa-github inputIcon"></i>
                     <input onchange="usecngfun()" oninput="usecngfun()" id="github" type="url" class="input"
@@ -144,8 +169,12 @@
 
     </table>
     <div class="flex center medel">
-        <button class="btn" type="submit">
+        <button class="btn" type="submit" onclick="alert('Reguest sent');">
             Publish Card
         </button>
     </div>
 </form>
+</div>
+<?php
+include "./footer.php";
+?>

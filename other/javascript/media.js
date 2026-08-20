@@ -1,5 +1,4 @@
 let getid = "";
-
 function openGallery(loadInputID) {
     const galleryElemnt = document.getElementById('gallery');
     galleryElemnt.style.display = "block";

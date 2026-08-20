@@ -1,5 +1,6 @@
 <?php
     // maps function in main menu
+    $r_key = Date("hmsdi");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +9,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css Link -->
-    <link rel="stylesheet" href="other/style/style.main.css">
-    <title><?php echo ndsql_info(1)["value"] ?></title>
+    <link rel="stylesheet" href="/other/style/style.main.css?v=<?php echo $r_key ?>">
+    <title><?php echo page_title(); ?></title>
     <!-- CDN FontAsome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
         integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
@@ -50,7 +51,7 @@
                     $data = json_decode($json, true);
 
                     foreach ($data as $item) {
-                        echo '<a href="' . $item["link"] . '">' . $item["name"] . '</a><br>';
+                        echo '<a href="/page/?p=' . $item["link"] . '">' . $item["name"] . '</a><br>';
                     }
                 ?>
             </div>
@@ -66,7 +67,4 @@
 
         </div>
     </nav>
-    <script src="other/javascript/haderScript.js"></script>
-</body>
-
-</html>
+ 
